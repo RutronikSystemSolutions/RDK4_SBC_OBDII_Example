@@ -8,8 +8,8 @@ This application is intended to be used as a reference firmware example for the 
 
 ## Requirements
 
-- [ModusToolbox® software](https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/) v3.0
-- The latest hardware release RDK4 Rev1.
+- [ModusToolbox® software](https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/) v3.1
+- The latest hardware release [RDK4 Rev2](https://github.com/RutronikSystemSolutions/RDK4_Hardware_Files).
 
 ## Using the code example
 
@@ -22,7 +22,7 @@ Create the project and open it using one of the following:
 
 1. Click the **New Application** link in the **Quick Panel** (or, use **File** > **New** > **ModusToolbox&trade; Application**). This launches the [Project Creator](https://www.infineon.com/ModusToolboxProjectCreator) tool.
 
-2. Pick a kit supported by the code example from the list shown in the **Project Creator - Choose Board Support Package (BSP)** dialog.
+2. Pick a kit supported by the code example from the list shown in the **Project Creator - Choose Board Support Package (BSP)** dialogue.
 
    When you select a supported kit, the example is reconfigured automatically to work with the kit. To work with a different supported kit later, use the [Library Manager](https://www.infineon.com/ModusToolboxLibraryManager) to choose the BSP for the supported kit. You can use the Library Manager to select or update the BSP and firmware libraries used in this application. To access the Library Manager, click the link from the **Quick Panel**.
 
@@ -30,7 +30,7 @@ Create the project and open it using one of the following:
 
    If you want to use the application for a kit not listed here, you may need to update the source files. If the kit does not have the required resources, the application may not work.
 
-3. In the **Project Creator - Select Application** dialog, choose the example by enabling the checkbox.
+3. In the **Project Creator - Select Application** dialogue, choose the example by enabling the checkbox.
 
 4. (Optional) Change the suggested **New Application Name**.
 
@@ -46,19 +46,19 @@ For more details, see the [Eclipse IDE for ModusToolbox&trade; software user gui
 
 The firmware example uses KitProg3 Debug UART for debug output. Some of the most common OBD-II PIDs are presented twice per second: Vehicle speed (0x0D), Engine speed (0x0C), Control module voltage (0x66), Intake air temperature (0x0F), Intake manifold absolute pressure (0x0B), Mass air flow sensor air flowrate (0x10). 
 
-The Green and Red USER LEDs indicate whether the device has the connection with the CAN network using standard OBD-II  protocol or not. The result shown below was taken from a real vehicle while driving. 
+The Green and Red USER LEDs indicate whether the device has a connection with the CAN network using standard OBD-II  protocol or not. The result shown below was taken from a real vehicle while driving. 
 
 <img src="images/debug_output.png" style="zoom:100%;" />
 
 ### Debugging
 
-If you successfully have imported the example, the debug configurations are already prepared to use with a the KitProg3, MiniProg4, or J-link. Open the ModusToolbox perspective and find the Quick Panel. Click on the desired debug launch configuration and wait for the programming to complete and debugging process to start.
+If you successfully have imported the example, the debug configurations are already prepared to use with the KitProg3 or MiniProg4. Open the ModusToolbox perspective and find the Quick Panel. Click on the desired debug launch configuration and wait for the programming to complete and the debugging process to start.
 
 <img src="images/debug_launch.png" style="zoom:100%;" />
 
 ### OBD-II Cable Assembly
 
-The OBD-II cable is not included to the RDK4 development kit, hence it is needed to assemble it before the example could be fully tested with a vehicle. The part of the cable is provided by Rutronik and comes together with RDK4's package. It is a cable for the Amphenol ICC Minitek MicroSpace**™** header Part No.: **10142344-104KLF**. The rest has to be done by the developers. Soldering skills are needed to assemble the OBD-II socket, please pay attention to the pinouts shown below:
+The OBD-II cable is not included in the RDK4 development kit, hence it is needed to assemble it before the example could be fully tested with a vehicle. The part of the cable is provided by Rutronik and comes together with RDK4's package. It is a cable for the Amphenol ICC Minitek MicroSpace**™** header Part No.: **10142344-104KLF**. The rest has to be done by the developers. Soldering skills are needed to assemble the OBD-II socket, please pay attention to the pinouts shown below:
 
 <img src="images/CAN_pinout.png" style="zoom:70%;" /> <img src="images/obd2_socket.png" style="zoom:50%;" />
 
